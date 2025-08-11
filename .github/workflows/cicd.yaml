@@ -254,7 +254,7 @@ jobs:
             --settings \
               POSTGRES_HOST="$PG_SERVER_NAME" \
               POSTGRES_USER="${{ secrets.AZURE_POSTGRESQL_ADMIN_USER }}" \
-              POSTGRES_PASSWORD="" # |<<<< PASSWORD FROM AZ KEYVAULT
+              POSTGRES_PASSWORD="test" # |<<<< PASSWORD FROM AZ KEYVAULT
 
           echo "Enable logging for backend web app"
           az webapp log config \
